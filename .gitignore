@@ -1,0 +1,29 @@
+# This repo is PUBLIC (it serves hormonelog's privacy policy and terms) and had no
+# .gitignore at all until 2026-10-01. The portfolio secrets sweep found it clean --
+# all three tracked files are static HTML -- but a public repo with no ignore rules
+# is one stray `git add -A` away from publishing whatever is sitting in the folder.
+#
+# Real credentials live in the macOS Keychain (`jarvis/<name>`) or
+# ~/.config/jarvis/keys/ per rules 6 and 7. None of them belong in any tree.
+
+# --- credentials: never commit ---
+.env
+.env.*
+!.env.example
+*.p8
+*.p12
+*.pem
+*.jks
+*.keystore
+*.mobileprovision
+*service-account*.json
+
+# --- os / editor noise ---
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.log
+
+# --- dependencies / build output ---
+node_modules/
