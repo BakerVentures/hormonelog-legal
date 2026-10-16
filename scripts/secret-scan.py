@@ -469,7 +469,7 @@ SELF_TEST_FIXTURES = [
     ('EXPO_TOKEN=$EXPO_TOKEN', False, "shell variable reference"),
     ('CLOUDFLARE_API_TOKEN=', False, "empty assignment"),  # secret-scan:allow
     ('FOO_TOKEN=SOME_OTHER_VAR', False, "UPPER_SNAKE reference"),
-    ('url = "postgresql://postgres:postgres@localhost:54322/postgres"', False,
+    ('url = "postgresql://postgres:postgres@localhost:54322/postgres"', False,  # secret-scan:allow
      "stock supabase db url -- plain-word userinfo"),
     ('"integrity": "sha512-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="', False,
      "lockfile integrity hash"),
